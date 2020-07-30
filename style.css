@@ -32,7 +32,7 @@ body {
 
 .content {
 	padding: 5% 12.5%;
-	width: 55%;
+	width: 60%;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -43,7 +43,7 @@ body {
 }
 
 .hero {
-	width: 45%;
+	width: 40%;
 	height: 100%;
 }
 
@@ -55,11 +55,11 @@ body {
 .intro {
 	font-weight: 400;
 	font-size: 16px;
-	margin-top: 12.5%;
+	margin-top: 20%;
 }
 
 .intro > * {
-	margin-top: 3%;
+	margin-top: 5%;
 }
 
 .intro p {
@@ -68,8 +68,9 @@ body {
 
 .intro p:first-child {
 	text-transform: uppercase;
+	line-height: 1.25;
 	font-weight: 300;
-	font-size: 40px;
+	font-size: 45px;
 	letter-spacing: 0.25em;
 }
 
