@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-red: rgb(65, 58, 58);
+    --Gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --Gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--Desaturated-Red);
+    font-family: 'Josefin Sans',
+        sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+body {
+    background-color: #fff;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.content {
+    padding: 5% 15%;
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero {
+    width: 40%;
+    height: 100%;
+}
+
+.hero img {
+    height: 100%;
+    width: 100%;
+}
+
+.intro {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 15%;
+}
+
+.intro>* {
+    margin-top: 7.5%;
+}
+
+.intro p {
+    line-height: 1.5em;
+}
+
+
+.intro p:first-child {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 36px;
+    letter-spacing: .25em;
+}
+
+
+.intro span {
+    display: block;
+    color: var(--Dark-Grayish-red);
+    font-weight: 600;
+    font-size: 40px;
+}
+
+
+.hero-mobile {
+    display: none;
+}
+
+.form {
+    display: flex;
+    position: relative;
+}
+
+input {
+    border: 1px solid var(--Desaturated-Red);
+    border-right: none;
+    padding: 10px 25px;
+    border-radius: 50px 0 0 50px;
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+    width: 80%;
+    margin-top: 2%;
+    background: transparent;
+    cursor: pointer;
+}
+
+input:focus,
+input:active {
+    border: 2px solid var(--Desaturated-Red);
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+    margin-top: 2%;
+    border-color: var(--Soft-Red);
+    outline: none;
+    background: transparent;
+    cursor: auto;
+}
+
+input:hover {
+    border: 2px solid var(--Desaturated-Red);
+}
+
+
+
+button {
+    border: 1px solid var(--Desaturated-Red);
+    padding: 15px 25px;
+    border-radius: 50px;
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+    width: 25%;
+    margin-top: 2%;
+    margin-left: -25px;
+    background-image: var(--Gradient-2);
+    z-index: 100;
+    outline: none;
+    cursor: pointer;
+}
+
+button:active,
+button:hover {
+    padding: 15px 25px;
+    color: var(--Desaturated-Red);
+    outline: none;
+    opacity: .65;
+    box-shadow: 1px 10px 15px var(--Desaturated-Red);
+}
+
+input::placeholder {
+    color: var(--Desaturated-Red);
+    background-color: transparent;
+}
+
+.error {
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 85% center;
+    border: 2.5px solid var(--Soft-Red);
+    border-right: none;
+}
+
+.error-message {
+    display: none;
+    color: var(--Soft-Red);
+    margin: 0;
+    padding: 10px 25px;
+}
+
+.success {
+    border: 2px solid #178349;
+    border-right: none;
+}
+
+.success-message {
+    display: none;
+    color: #178349;
+    margin: 0;
+    padding: 10px 25px;
+}
+
+@media only screen and (max-width:650px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100vw;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .logo {
+        padding: 7.5%;
+    }
+
+    .logo img {
+        height: 20px;
+    }
+
+    .hero-mobile {
+        display: block;
+    }
+
+    .hero-mobile img {
+        width: 100%;
+    }
+
+    .intro {
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        padding: 0 7.5% 100px;
+        background-image: var(--Gradient-1);
+    }
+
+    .intro>* {
+        margin-top: 7.5%;
+    }
+
+    .intro p:first-child {
+        line-height: 1;
+    }
+
+    .hero {
+        display: none;
+    }
+
+    .error {
+        background-image: url(images/icon-error.svg);
+        background-repeat: no-repeat;
+        background-position: 80% center;
+        border: 2.5px solid var(--Soft-Red);
+        border-right: none;
+    }
+
+    .error-message {
+        color: var(--Soft-Red);
+        padding: 0 0 100px;
+    }
+
+    .success {
+
+        border: 2.5px solid #178349;
+        ;
+        border-right: none;
+    }
+
+    .success-message {
+        color: #178349;
+        padding: 0 0 100px;
+    }
+}
